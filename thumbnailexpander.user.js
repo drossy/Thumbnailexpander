@@ -12,6 +12,7 @@ var imagebam_regexp=/http:\/\/[a-z0-9]+\.imagebam\.com\/[0-9]+\/(.*)/;
 var turboimage_regexp=/http:\/\/[a-z0-9]+\.turboimagehost\.com\/t[0-9]*\/([^_]+)_(.*)/;
 var imagehavennet_regexp=/http:\/\/([a-z0-9]+)\.imagehaven\.net\/img\/thumbs\/(.*)/;
 var imagevenuecom_regexp=/http:\/\/([a-z0-9]+)\.imagevenue\.com\/loc[0-9]+\/th_(.*)/;
+var imgbox_regexp=/http:\/\/t\.imgbox.com\/(.*)/;
 
 for (var i = Results.snapshotLength - 1; i >= 0; i--) {
 		var elmImage = Results.snapshotItem(i);
@@ -30,6 +31,9 @@ for (var i = Results.snapshotLength - 1; i >= 0; i--) {
 		} else if (matches = urlSrc.match(imagevenuecom_regexp) ) {
 			replstr = "http://"+matches[1]+".imagevenue.com/img.php?image="+matches[2];
 
+		} else if (matches = urlSrc.match(imgbox_regexp) ) {
+				replstr = "http://imgbox.com/"+matches[1];
+		
 		} else {
 			// No match so move onto the next image
 			continue;
