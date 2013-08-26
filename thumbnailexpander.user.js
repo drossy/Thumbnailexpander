@@ -1,7 +1,8 @@
 // ==UserScript==
 // @name                Thumbnailexpander
-// @version		1.0
-// @namespace	        http://www.drossy.net
+// @version             1.2
+// @namespace           http://www.drossy.net
+// @grant               none
 // @description	        Expands a thumbnail image to a link to the image
 // ==/UserScript==
 
