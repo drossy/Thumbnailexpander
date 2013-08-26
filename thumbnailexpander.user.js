@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name                Thumbnailexpander
-// @version             1.2
+// @version             1.3
 // @namespace           http://www.drossy.net
 // @grant               none
-// @description	        Expands a thumbnail image to a link to the image
+// @updateURL           https://github.com/drossy/Thumbnailexpander/raw/master/thumbnailexpander.user.js
+// @description         Expands a thumbnail image to a link to the image
 // ==/UserScript==
 
 
