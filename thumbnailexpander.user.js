@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name                Thumbnailexpander
-// @version             1.4
+// @version             1.5
 // @namespace           http://www.drossy.net
 // @grant               none
 // @updateURL           https://github.com/drossy/Thumbnailexpander/raw/master/thumbnailexpander.user.js
@@ -34,7 +34,7 @@ for (var i = Results.snapshotLength - 1; i >= 0; i--) {
 			replstr = "http://"+matches[1]+".imagevenue.com/img.php?image="+matches[2];
 
 		} else if (matches = urlSrc.match(imgbox_regexp) ) {
-				replstr = "http://imgbox.com/"+matches[1];
+				replstr = "http://imgbox.com/"+matches[2];
 		
 		} else {
 			// No match so move onto the next image
