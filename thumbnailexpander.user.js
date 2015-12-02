@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name                Thumbnailexpander
-// @version             1.5
+// @version             1.6
 // @namespace           http://www.drossy.net
 // @grant               none
 // @updateURL           https://github.com/drossy/Thumbnailexpander/raw/master/thumbnailexpander.user.js
@@ -12,6 +12,7 @@ var Results = document.evaluate("//img", document, null, XPathResult.UNORDERED_N
 
 var imagebam_regexp=/http:\/\/[a-z0-9]+\.imagebam\.com\/[0-9]+\/(.*)/;
 var turboimage_regexp=/http:\/\/[a-z0-9]+\.turboimagehost\.com\/t[0-9]*\/([^_]+)_(.*)/;
+var turboimgnet_regexp=/http:\/\/[a-z0-9]+\.turboimg\.net\/t[0-9]*\/([^_]+)_(.*)/;
 var imagehavennet_regexp=/http:\/\/([a-z0-9]+)\.imagehaven\.net\/img\/thumbs\/(.*)/;
 var imagevenuecom_regexp=/http:\/\/([a-z0-9]+)\.imagevenue\.com\/loc[0-9]+\/th_(.*)/;
 var imgbox_regexp=/http:\/\/([0-9]\.)?t\.imgbox.com\/(.*)/;
@@ -27,6 +28,9 @@ for (var i = Results.snapshotLength - 1; i >= 0; i--) {
 		} else if (matches = urlSrc.match(turboimage_regexp) ) {
 			replstr = "http://www.turboimagehost.com/p/"+matches[1]+"/"+matches[2]+".html";
 			
+		} else if (matches = urlSrc.match(turboimgnet_regexp) ) {
+			replstr = "http://www.turboimagehost.com/p/"+matches[1]+"/"+matches[2]+".html";			
+						
 		} else if (matches = urlSrc.match(imagehavennet_regexp) ) {
 			replstr = "http://"+matches[1]+".imagehaven.net/img.php?id="+matches[2];
 
